@@ -31,17 +31,14 @@ if room = R_basement_2{
     
 }
 
-// kitchen puzzle door?
+// kitchen puzzle door
 if room = R_kitchen_door_1{
     if global.taskComplete_payRespects= true{
         audio_play_sound(A_Bot_lightSwitch,1,false);
-        room_goto(R_kitchen_door_puzzle);
+        room_goto(R_lockZoom);
         instance_destroy(O_clickable);
     }
-    
-    
 }
-
 
 // after kitchen puzzle door 
 if room = R_kitchen_door_4{
